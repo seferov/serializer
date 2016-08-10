@@ -58,6 +58,7 @@ class AnnotationLoader implements LoaderInterface
                 foreach ($this->reader->getPropertyAnnotations($property) as $groups) {
                     if ($groups instanceof Groups) {
                         foreach ($groups->getGroups() as $group) {
+                            $attributesMetadata[$property->name]->customName = $groups->name;
                             $attributesMetadata[$property->name]->addGroup($group);
                         }
                     }
@@ -82,6 +83,7 @@ class AnnotationLoader implements LoaderInterface
                             }
 
                             foreach ($groups->getGroups() as $group) {
+                                $attributeMetadata->customName = $groups->name;
                                 $attributeMetadata->addGroup($group);
                             }
                         } else {

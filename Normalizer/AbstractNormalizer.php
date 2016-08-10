@@ -265,7 +265,12 @@ abstract class AbstractNormalizer extends SerializerAwareNormalizer implements N
         $allowedAttributes = array();
         foreach ($this->classMetadataFactory->getMetadataFor($classOrObject)->getAttributesMetadata() as $attributeMetadata) {
             if (count(array_intersect($attributeMetadata->getGroups(), $context[static::GROUPS]))) {
-                $allowedAttributes[] = $attributesAsString ? $attributeMetadata->getName() : $attributeMetadata;
+                $attribute = $attributesAsString ? $attributeMetadata->getName() : $attributeMetadata;
+                if ($attributeMetadata->customName) {
+                    $allowedAttributes[$attributeMetadata->customName] = $attribute;
+                } else {
+                    $allowedAttributes[] = $attribute;
+                }
             }
         }
 

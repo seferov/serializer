@@ -95,12 +95,13 @@ class ObjectNormalizer extends AbstractNormalizer
             $attributes = array_keys($attributes);
         }
 
-        foreach ($attributes as $attribute) {
+        foreach ($attributes as $name => $attribute) {
             if (in_array($attribute, $this->ignoredAttributes)) {
                 continue;
             }
 
             $attributeValue = $this->propertyAccessor->getValue($object, $attribute);
+            $name = is_string($name) ? $name : $attribute;
 
             if (isset($this->callbacks[$attribute])) {
                 $attributeValue = call_user_func($this->callbacks[$attribute], $attributeValue);
@@ -115,10 +116,10 @@ class ObjectNormalizer extends AbstractNormalizer
             }
 
             if ($this->nameConverter) {
-                $attribute = $this->nameConverter->normalize($attribute);
+                $name = $this->nameConverter->normalize($name);
             }
 
-            $data[$attribute] = $attributeValue;
+            $data[$name] = $attributeValue;
         }
 
         return $data;

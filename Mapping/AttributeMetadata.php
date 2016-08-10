@@ -28,6 +28,11 @@ class AttributeMetadata implements AttributeMetadataInterface
     public $name;
 
     /**
+     * @var string
+     */
+    public $customName;
+
+    /**
      * @var array
      *
      * @internal This property is public in order to reduce the size of the
