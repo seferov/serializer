@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Mapping;
+namespace Seferov\Component\Serializer\Tests\Mapping;
 
-use Symfony\Component\Serializer\Mapping\AttributeMetadata;
-use Symfony\Component\Serializer\Mapping\ClassMetadata;
+use Seferov\Component\Serializer\Mapping\AttributeMetadata;
+use Seferov\Component\Serializer\Mapping\ClassMetadata;
 
 /**
  * @author Kévin Dunglas <dunglas@gmail.com>
@@ -21,7 +21,7 @@ class TestClassMetadataFactory
 {
     public static function createClassMetadata($withParent = false, $withInterface = false)
     {
-        $expected = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+        $expected = new ClassMetadata('Seferov\Component\Serializer\Tests\Fixtures\GroupDummy');
 
         $foo = new AttributeMetadata('foo');
         $foo->addGroup('a');
@@ -66,7 +66,7 @@ class TestClassMetadataFactory
 
     public static function createXmlCLassMetadata()
     {
-        $expected = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+        $expected = new ClassMetadata('Seferov\Component\Serializer\Tests\Fixtures\GroupDummy');
 
         $foo = new AttributeMetadata('foo');
         $foo->addGroup('group1');

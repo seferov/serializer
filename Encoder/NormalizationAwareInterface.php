@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Encoder;
+namespace Seferov\Component\Serializer\Encoder;
 
 /**
  * Defines the interface of encoders that will normalize data themselves.

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Fixtures;
+namespace Seferov\Component\Serializer\Tests\Fixtures;
 
-use Symfony\Component\Serializer\Annotation\Groups;
+use Seferov\Component\Serializer\Annotation\Groups;
 
 /**
  * @author Kévin Dunglas <dunglas@gmail.com>

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\NameConverter;
+namespace Seferov\Component\Serializer\Tests\NameConverter;
 
-use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+use Seferov\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
 
 /**
  * @author Kévin Dunglas <dunglas@gmail.com>
@@ -21,7 +21,7 @@ class CamelCaseToSnakeCaseNameConverterTest extends \PHPUnit_Framework_TestCase
     public function testInterface()
     {
         $attributeMetadata = new CamelCaseToSnakeCaseNameConverter();
-        $this->assertInstanceOf('Symfony\Component\Serializer\NameConverter\NameConverterInterface', $attributeMetadata);
+        $this->assertInstanceOf('Seferov\Component\Serializer\NameConverter\NameConverterInterface', $attributeMetadata);
     }
 
     /**

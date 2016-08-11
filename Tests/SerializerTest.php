@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests;
+namespace Seferov\Component\Serializer\Tests;
 
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
-use Symfony\Component\Serializer\Normalizer\CustomNormalizer;
-use Symfony\Component\Serializer\Tests\Fixtures\TraversableDummy;
-use Symfony\Component\Serializer\Tests\Fixtures\NormalizableTraversableDummy;
-use Symfony\Component\Serializer\Tests\Normalizer\TestNormalizer;
-use Symfony\Component\Serializer\Tests\Normalizer\TestDenormalizer;
+use Seferov\Component\Serializer\Serializer;
+use Seferov\Component\Serializer\Encoder\JsonEncoder;
+use Seferov\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+use Seferov\Component\Serializer\Normalizer\CustomNormalizer;
+use Seferov\Component\Serializer\Tests\Fixtures\TraversableDummy;
+use Seferov\Component\Serializer\Tests\Fixtures\NormalizableTraversableDummy;
+use Seferov\Component\Serializer\Tests\Normalizer\TestNormalizer;
+use Seferov\Component\Serializer\Tests\Normalizer\TestDenormalizer;
 
 class SerializerTest extends \PHPUnit_Framework_TestCase
 {
@@ -26,19 +26,19 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
     {
         $serializer = new Serializer();
 
-        $this->assertInstanceOf('Symfony\Component\Serializer\SerializerInterface', $serializer);
-        $this->assertInstanceOf('Symfony\Component\Serializer\Normalizer\NormalizerInterface', $serializer);
-        $this->assertInstanceOf('Symfony\Component\Serializer\Normalizer\DenormalizerInterface', $serializer);
-        $this->assertInstanceOf('Symfony\Component\Serializer\Encoder\EncoderInterface', $serializer);
-        $this->assertInstanceOf('Symfony\Component\Serializer\Encoder\DecoderInterface', $serializer);
+        $this->assertInstanceOf('Seferov\Component\Serializer\SerializerInterface', $serializer);
+        $this->assertInstanceOf('Seferov\Component\Serializer\Normalizer\NormalizerInterface', $serializer);
+        $this->assertInstanceOf('Seferov\Component\Serializer\Normalizer\DenormalizerInterface', $serializer);
+        $this->assertInstanceOf('Seferov\Component\Serializer\Encoder\EncoderInterface', $serializer);
+        $this->assertInstanceOf('Seferov\Component\Serializer\Encoder\DecoderInterface', $serializer);
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @expectedException \Seferov\Component\Serializer\Exception\UnexpectedValueException
      */
     public function testNormalizeNoMatch()
     {
-        $serializer = new Serializer(array($this->getMock('Symfony\Component\Serializer\Normalizer\CustomNormalizer')));
+        $serializer = new Serializer(array($this->getMock('Seferov\Component\Serializer\Normalizer\CustomNormalizer')));
         $serializer->normalize(new \stdClass(), 'xml');
     }
 
@@ -57,7 +57,7 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @expectedException \Seferov\Component\Serializer\Exception\UnexpectedValueException
      */
     public function testNormalizeOnDenormalizer()
     {
@@ -66,16 +66,16 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @expectedException \Seferov\Component\Serializer\Exception\UnexpectedValueException
      */
     public function testDenormalizeNoMatch()
     {
-        $serializer = new Serializer(array($this->getMock('Symfony\Component\Serializer\Normalizer\CustomNormalizer')));
+        $serializer = new Serializer(array($this->getMock('Seferov\Component\Serializer\Normalizer\CustomNormalizer')));
         $serializer->denormalize('foo', 'stdClass');
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @expectedException \Seferov\Component\Serializer\Exception\UnexpectedValueException
      */
     public function testDenormalizeOnNormalizer()
     {
@@ -95,14 +95,14 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
 
     public function testNormalizeWithSupportOnData()
     {
-        $normalizer1 = $this->getMock('Symfony\Component\Serializer\Normalizer\NormalizerInterface');
+        $normalizer1 = $this->getMock('Seferov\Component\Serializer\Normalizer\NormalizerInterface');
         $normalizer1->method('supportsNormalization')
             ->willReturnCallback(function ($data, $format) {
                 return isset($data->test);
             });
         $normalizer1->method('normalize')->willReturn('test1');
 
-        $normalizer2 = $this->getMock('Symfony\Component\Serializer\Normalizer\NormalizerInterface');
+        $normalizer2 = $this->getMock('Seferov\Component\Serializer\Normalizer\NormalizerInterface');
         $normalizer2->method('supportsNormalization')
             ->willReturn(true);
         $normalizer2->method('normalize')->willReturn('test2');
@@ -118,14 +118,14 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
 
     public function testDenormalizeWithSupportOnData()
     {
-        $denormalizer1 = $this->getMock('Symfony\Component\Serializer\Normalizer\DenormalizerInterface');
+        $denormalizer1 = $this->getMock('Seferov\Component\Serializer\Normalizer\DenormalizerInterface');
         $denormalizer1->method('supportsDenormalization')
             ->willReturnCallback(function ($data, $type, $format) {
                 return isset($data['test1']);
             });
         $denormalizer1->method('denormalize')->willReturn('test1');
 
-        $denormalizer2 = $this->getMock('Symfony\Component\Serializer\Normalizer\DenormalizerInterface');
+        $denormalizer2 = $this->getMock('Seferov\Component\Serializer\Normalizer\DenormalizerInterface');
         $denormalizer2->method('supportsDenormalization')
             ->willReturn(true);
         $denormalizer2->method('denormalize')->willReturn('test2');
@@ -161,7 +161,7 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @expectedException \Seferov\Component\Serializer\Exception\UnexpectedValueException
      */
     public function testSerializeNoEncoder()
     {
@@ -171,7 +171,7 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\LogicException
+     * @expectedException \Seferov\Component\Serializer\Exception\LogicException
      */
     public function testSerializeNoNormalizer()
     {
@@ -184,7 +184,7 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
     {
         $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
         $data = array('title' => 'foo', 'numbers' => array(5, 3));
-        $result = $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+        $result = $serializer->deserialize(json_encode($data), '\Seferov\Component\Serializer\Tests\Model', 'json');
         $this->assertEquals($data, $result->toArray());
     }
 
@@ -192,47 +192,47 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
     {
         $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
         $data = array('title' => 'foo', 'numbers' => array(5, 3));
-        $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+        $serializer->deserialize(json_encode($data), '\Seferov\Component\Serializer\Tests\Model', 'json');
         $data = array('title' => 'bar', 'numbers' => array(2, 8));
-        $result = $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+        $result = $serializer->deserialize(json_encode($data), '\Seferov\Component\Serializer\Tests\Model', 'json');
         $this->assertEquals($data, $result->toArray());
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\LogicException
+     * @expectedException \Seferov\Component\Serializer\Exception\LogicException
      */
     public function testDeserializeNoNormalizer()
     {
         $serializer = new Serializer(array(), array('json' => new JsonEncoder()));
         $data = array('title' => 'foo', 'numbers' => array(5, 3));
-        $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+        $serializer->deserialize(json_encode($data), '\Seferov\Component\Serializer\Tests\Model', 'json');
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @expectedException \Seferov\Component\Serializer\Exception\UnexpectedValueException
      */
     public function testDeserializeWrongNormalizer()
     {
         $serializer = new Serializer(array(new CustomNormalizer()), array('json' => new JsonEncoder()));
         $data = array('title' => 'foo', 'numbers' => array(5, 3));
-        $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+        $serializer->deserialize(json_encode($data), '\Seferov\Component\Serializer\Tests\Model', 'json');
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @expectedException \Seferov\Component\Serializer\Exception\UnexpectedValueException
      */
     public function testDeserializeNoEncoder()
     {
         $serializer = new Serializer(array(), array());
         $data = array('title' => 'foo', 'numbers' => array(5, 3));
-        $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+        $serializer->deserialize(json_encode($data), '\Seferov\Component\Serializer\Tests\Model', 'json');
     }
 
     public function testDeserializeSupported()
     {
         $serializer = new Serializer(array(new GetSetMethodNormalizer()), array());
         $data = array('title' => 'foo', 'numbers' => array(5, 3));
-        $this->assertTrue($serializer->supportsDenormalization(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json'));
+        $this->assertTrue($serializer->supportsDenormalization(json_encode($data), '\Seferov\Component\Serializer\Tests\Model', 'json'));
     }
 
     public function testDeserializeNotSupported()
@@ -246,7 +246,7 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
     {
         $serializer = new Serializer(array(), array());
         $data = array('title' => 'foo', 'numbers' => array(5, 3));
-        $this->assertFalse($serializer->supportsDenormalization(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json'));
+        $this->assertFalse($serializer->supportsDenormalization(json_encode($data), '\Seferov\Component\Serializer\Tests\Model', 'json'));
     }
 
     public function testEncode()

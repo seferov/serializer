@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Normalizer;
+namespace Seferov\Component\Serializer\Normalizer;
 
 /**
  * @author Jordi Boggiano <j.boggiano@seld.be>
@@ -59,6 +59,6 @@ class CustomNormalizer extends SerializerAwareNormalizer implements NormalizerIn
      */
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return is_subclass_of($type, 'Symfony\Component\Serializer\Normalizer\DenormalizableInterface');
+        return is_subclass_of($type, 'Seferov\Component\Serializer\Normalizer\DenormalizableInterface');
     }
 }

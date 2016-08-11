@@ -1,0 +1,1331 @@
+Searching 93 files for "Symfony\Component"
+
+/Users/safarov/htdocs/symfony-serializer/Serializer.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer;
+   13  
+   14: use Symfony\Component\Serializer\Encoder\ChainDecoder;
+   15: use Symfony\Component\Serializer\Encoder\ChainEncoder;
+   16: use Symfony\Component\Serializer\Encoder\EncoderInterface;
+   17: use Symfony\Component\Serializer\Encoder\DecoderInterface;
+   18: use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+   19: use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
+   20: use Symfony\Component\Serializer\Exception\LogicException;
+   21: use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+   22  
+   23  /**
+
+/Users/safarov/htdocs/symfony-serializer/SerializerAwareInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/SerializerInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Annotation/Groups.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Annotation;
+   13  
+   14: use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/ChainDecoder.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\Exception\RuntimeException;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/ChainEncoder.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\Exception\RuntimeException;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/DecoderInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/EncoderInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/JsonDecode.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/JsonEncode.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/JsonEncoder.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14  /**
+   ..
+   46      public function getLastEncodingError()
+   47      {
+   48:         @trigger_error('The '.__METHOD__.' method is deprecated since version 2.5 and will be removed in 3.0. Catch the exception raised by the Symfony\Component\Serializer\Encoder\JsonEncode::encode() method instead to get the last JSON encoding error.', E_USER_DEPRECATED);
+   49  
+   50          return $this->encodingImpl->getLastError();
+   ..
+   60      public function getLastDecodingError()
+   61      {
+   62:         @trigger_error('The '.__METHOD__.' method is deprecated since version 2.5 and will be removed in 3.0. Catch the exception raised by the Symfony\Component\Serializer\Encoder\JsonDecode::decode() method instead to get the last JSON decoding error.', E_USER_DEPRECATED);
+   63  
+   64          return $this->decodingImpl->getLastError();
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/NormalizationAwareInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/SerializerAwareEncoder.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\SerializerInterface;
+   15: use Symfony\Component\Serializer\SerializerAwareInterface;
+   16  
+   17  /**
+
+/Users/safarov/htdocs/symfony-serializer/Encoder/XmlEncoder.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Exception/CircularReferenceException.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Exception;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Exception/Exception.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Exception;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Exception/ExceptionInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Exception;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Exception/InvalidArgumentException.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Exception;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Exception/LogicException.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Exception;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Exception/MappingException.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Exception;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Exception/RuntimeException.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Exception;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Exception/UnexpectedValueException.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Exception;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Exception/UnsupportedException.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Exception;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/AttributeMetadataInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/ClassMetadata.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/ClassMetadataInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/Factory/ClassMetadataFactory.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping\Factory;
+   13  
+   14  use Doctrine\Common\Cache\Cache;
+   15: use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+   16: use Symfony\Component\Serializer\Mapping\ClassMetadata;
+   17: use Symfony\Component\Serializer\Mapping\Loader\LoaderInterface;
+   18  
+   19  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/Factory/ClassMetadataFactoryInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping\Factory;
+   13  
+   14: use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+   15: use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+   16  
+   17  /**
+   ..
+   32       * Otherwise, a new metadata instance is created. If the factory was
+   33       * configured with a loader, the metadata is passed to the
+   34:      * {@link \Symfony\Component\Serializer\Mapping\Loader\LoaderInterface::loadClassMetadata()} method for further
+   35       * configuration. At last, the new object is returned.
+   36       *
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/Loader/AnnotationLoader.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping\Loader;
+   13  
+   14  use Doctrine\Common\Annotations\Reader;
+   15: use Symfony\Component\Serializer\Annotation\Groups;
+   16: use Symfony\Component\Serializer\Exception\MappingException;
+   17: use Symfony\Component\Serializer\Mapping\AttributeMetadata;
+   18: use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+   19  
+   20  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/Loader/FileLoader.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping\Loader;
+   13  
+   14: use Symfony\Component\Serializer\Exception\MappingException;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/Loader/LoaderChain.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping\Loader;
+   13  
+   14: use Symfony\Component\Serializer\Exception\MappingException;
+   15: use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+   16  
+   17  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/Loader/LoaderInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping\Loader;
+   13  
+   14: use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/Loader/XmlFileLoader.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping\Loader;
+   13  
+   14: use Symfony\Component\Config\Util\XmlUtils;
+   15: use Symfony\Component\Serializer\Exception\MappingException;
+   16: use Symfony\Component\Serializer\Mapping\AttributeMetadata;
+   17: use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+   18  
+   19  /**
+
+/Users/safarov/htdocs/symfony-serializer/Mapping/Loader/YamlFileLoader.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Mapping\Loader;
+   13  
+   14: use Symfony\Component\Serializer\Exception\MappingException;
+   15: use Symfony\Component\Serializer\Mapping\AttributeMetadata;
+   16: use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+   17: use Symfony\Component\Yaml\Parser;
+   18  
+   19  /**
+
+/Users/safarov/htdocs/symfony-serializer/NameConverter/CamelCaseToSnakeCaseNameConverter.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\NameConverter;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/NameConverter/NameConverterInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\NameConverter;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/AbstractNormalizer.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14: use Symfony\Component\Serializer\Exception\CircularReferenceException;
+   15: use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+   16: use Symfony\Component\Serializer\Exception\LogicException;
+   17: use Symfony\Component\Serializer\Exception\RuntimeException;
+   18: use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
+   19: use Symfony\Component\Serializer\Mapping\AttributeMetadataInterface;
+   20: use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+   21: use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
+   22  
+   23  /**
+   ..
+  154       * Set attributes to be camelized on denormalize.
+  155       *
+  156:      * @deprecated Deprecated since version 2.7, to be removed in 3.0. Use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.
+  157       *
+  158       * @param array $camelizedAttributes
+  ...
+  164      public function setCamelizedAttributes(array $camelizedAttributes)
+  165      {
+  166:         @trigger_error(sprintf('%s is deprecated since version 2.7 and will be removed in 3.0. Use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.', __METHOD__), E_USER_DEPRECATED);
+  167  
+  168          if ($this->nameConverter && !$this->nameConverter instanceof CamelCaseToSnakeCaseNameConverter) {
+  ...
+  235       * Format an attribute name, for example to convert a snake_case name to camelCase.
+  236       *
+  237:      * @deprecated Deprecated since version 2.7, to be removed in 3.0. Use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.
+  238       *
+  239       * @param string $attributeName
+  ...
+  243      protected function formatAttribute($attributeName)
+  244      {
+  245:         @trigger_error(sprintf('%s is deprecated since version 2.7 and will be removed in 3.0. Use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.', __METHOD__), E_USER_DEPRECATED);
+  246  
+  247          return $this->nameConverter ? $this->nameConverter->normalize($attributeName) : $attributeName;
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/CustomNormalizer.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14  /**
+   ..
+   60      public function supportsDenormalization($data, $type, $format = null)
+   61      {
+   62:         return is_subclass_of($type, 'Symfony\Component\Serializer\Normalizer\DenormalizableInterface');
+   63      }
+   64  }
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/DenormalizableInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/DenormalizerInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/GetSetMethodNormalizer.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14: use Symfony\Component\Serializer\Exception\CircularReferenceException;
+   15: use Symfony\Component\Serializer\Exception\LogicException;
+   16: use Symfony\Component\Serializer\Exception\RuntimeException;
+   17  
+   18  /**
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/NormalizableInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/NormalizerInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/ObjectNormalizer.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14: use Symfony\Component\PropertyAccess\Exception\NoSuchPropertyException;
+   15: use Symfony\Component\PropertyAccess\PropertyAccess;
+   16: use Symfony\Component\PropertyAccess\PropertyAccessorInterface;
+   17: use Symfony\Component\Serializer\Exception\CircularReferenceException;
+   18: use Symfony\Component\Serializer\Exception\LogicException;
+   19: use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
+   20: use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
+   21  
+   22  /**
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/PropertyNormalizer.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14: use Symfony\Component\Serializer\Exception\CircularReferenceException;
+   15: use Symfony\Component\Serializer\Exception\LogicException;
+   16: use Symfony\Component\Serializer\Exception\RuntimeException;
+   17  
+   18  /**
+
+/Users/safarov/htdocs/symfony-serializer/Normalizer/SerializerAwareNormalizer.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Normalizer;
+   13  
+   14: use Symfony\Component\Serializer\SerializerInterface;
+   15: use Symfony\Component\Serializer\SerializerAwareInterface;
+   16  
+   17  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/SerializerTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests;
+   13  
+   14: use Symfony\Component\Serializer\Serializer;
+   15: use Symfony\Component\Serializer\Encoder\JsonEncoder;
+   16: use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+   17: use Symfony\Component\Serializer\Normalizer\CustomNormalizer;
+   18: use Symfony\Component\Serializer\Tests\Fixtures\TraversableDummy;
+   19: use Symfony\Component\Serializer\Tests\Fixtures\NormalizableTraversableDummy;
+   20: use Symfony\Component\Serializer\Tests\Normalizer\TestNormalizer;
+   21: use Symfony\Component\Serializer\Tests\Normalizer\TestDenormalizer;
+   22  
+   23  class SerializerTest extends \PHPUnit_Framework_TestCase
+   ..
+   27          $serializer = new Serializer();
+   28  
+   29:         $this->assertInstanceOf('Symfony\Component\Serializer\SerializerInterface', $serializer);
+   30:         $this->assertInstanceOf('Symfony\Component\Serializer\Normalizer\NormalizerInterface', $serializer);
+   31:         $this->assertInstanceOf('Symfony\Component\Serializer\Normalizer\DenormalizerInterface', $serializer);
+   32:         $this->assertInstanceOf('Symfony\Component\Serializer\Encoder\EncoderInterface', $serializer);
+   33:         $this->assertInstanceOf('Symfony\Component\Serializer\Encoder\DecoderInterface', $serializer);
+   34      }
+   35  
+   36      /**
+   37:      * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+   38       */
+   39      public function testNormalizeNoMatch()
+   40      {
+   41:         $serializer = new Serializer(array($this->getMock('Symfony\Component\Serializer\Normalizer\CustomNormalizer')));
+   42          $serializer->normalize(new \stdClass(), 'xml');
+   43      }
+   ..
+   58  
+   59      /**
+   60:      * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+   61       */
+   62      public function testNormalizeOnDenormalizer()
+   ..
+   67  
+   68      /**
+   69:      * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+   70       */
+   71      public function testDenormalizeNoMatch()
+   72      {
+   73:         $serializer = new Serializer(array($this->getMock('Symfony\Component\Serializer\Normalizer\CustomNormalizer')));
+   74          $serializer->denormalize('foo', 'stdClass');
+   75      }
+   76  
+   77      /**
+   78:      * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+   79       */
+   80      public function testDenormalizeOnNormalizer()
+   ..
+   96      public function testNormalizeWithSupportOnData()
+   97      {
+   98:         $normalizer1 = $this->getMock('Symfony\Component\Serializer\Normalizer\NormalizerInterface');
+   99          $normalizer1->method('supportsNormalization')
+  100              ->willReturnCallback(function ($data, $format) {
+  ...
+  103          $normalizer1->method('normalize')->willReturn('test1');
+  104  
+  105:         $normalizer2 = $this->getMock('Symfony\Component\Serializer\Normalizer\NormalizerInterface');
+  106          $normalizer2->method('supportsNormalization')
+  107              ->willReturn(true);
+  ...
+  119      public function testDenormalizeWithSupportOnData()
+  120      {
+  121:         $denormalizer1 = $this->getMock('Symfony\Component\Serializer\Normalizer\DenormalizerInterface');
+  122          $denormalizer1->method('supportsDenormalization')
+  123              ->willReturnCallback(function ($data, $type, $format) {
+  ...
+  126          $denormalizer1->method('denormalize')->willReturn('test1');
+  127  
+  128:         $denormalizer2 = $this->getMock('Symfony\Component\Serializer\Normalizer\DenormalizerInterface');
+  129          $denormalizer2->method('supportsDenormalization')
+  130              ->willReturn(true);
+  ...
+  162  
+  163      /**
+  164:      * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+  165       */
+  166      public function testSerializeNoEncoder()
+  ...
+  172  
+  173      /**
+  174:      * @expectedException \Symfony\Component\Serializer\Exception\LogicException
+  175       */
+  176      public function testSerializeNoNormalizer()
+  ...
+  185          $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
+  186          $data = array('title' => 'foo', 'numbers' => array(5, 3));
+  187:         $result = $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+  188          $this->assertEquals($data, $result->toArray());
+  189      }
+  ...
+  193          $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
+  194          $data = array('title' => 'foo', 'numbers' => array(5, 3));
+  195:         $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+  196          $data = array('title' => 'bar', 'numbers' => array(2, 8));
+  197:         $result = $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+  198          $this->assertEquals($data, $result->toArray());
+  199      }
+  200  
+  201      /**
+  202:      * @expectedException \Symfony\Component\Serializer\Exception\LogicException
+  203       */
+  204      public function testDeserializeNoNormalizer()
+  ...
+  206          $serializer = new Serializer(array(), array('json' => new JsonEncoder()));
+  207          $data = array('title' => 'foo', 'numbers' => array(5, 3));
+  208:         $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+  209      }
+  210  
+  211      /**
+  212:      * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+  213       */
+  214      public function testDeserializeWrongNormalizer()
+  ...
+  216          $serializer = new Serializer(array(new CustomNormalizer()), array('json' => new JsonEncoder()));
+  217          $data = array('title' => 'foo', 'numbers' => array(5, 3));
+  218:         $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+  219      }
+  220  
+  221      /**
+  222:      * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+  223       */
+  224      public function testDeserializeNoEncoder()
+  ...
+  226          $serializer = new Serializer(array(), array());
+  227          $data = array('title' => 'foo', 'numbers' => array(5, 3));
+  228:         $serializer->deserialize(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json');
+  229      }
+  230  
+  ...
+  233          $serializer = new Serializer(array(new GetSetMethodNormalizer()), array());
+  234          $data = array('title' => 'foo', 'numbers' => array(5, 3));
+  235:         $this->assertTrue($serializer->supportsDenormalization(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json'));
+  236      }
+  237  
+  ...
+  247          $serializer = new Serializer(array(), array());
+  248          $data = array('title' => 'foo', 'numbers' => array(5, 3));
+  249:         $this->assertFalse($serializer->supportsDenormalization(json_encode($data), '\Symfony\Component\Serializer\Tests\Model', 'json'));
+  250      }
+  251  
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Annotation/GroupsTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Annotation;
+   13  
+   14: use Symfony\Component\Serializer\Annotation\Groups;
+   15  
+   16  /**
+   ..
+   20  {
+   21      /**
+   22:      * @expectedException \Symfony\Component\Serializer\Exception\InvalidArgumentException
+   23       */
+   24      public function testEmptyGroupsParameter()
+   ..
+   28  
+   29      /**
+   30:      * @expectedException \Symfony\Component\Serializer\Exception\InvalidArgumentException
+   31       */
+   32      public function testNotAnArrayGroupsParameter()
+   ..
+   36  
+   37      /**
+   38:      * @expectedException \Symfony\Component\Serializer\Exception\InvalidArgumentException
+   39       */
+   40      public function testInvalidGroupsParameter()
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Encoder/JsonEncoderTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\Encoder\JsonEncoder;
+   15: use Symfony\Component\Serializer\Serializer;
+   16: use Symfony\Component\Serializer\Normalizer\CustomNormalizer;
+   17  
+   18  class JsonEncoderTest extends \PHPUnit_Framework_TestCase
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Encoder/XmlEncoderTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Encoder;
+   13  
+   14: use Symfony\Component\Serializer\Tests\Fixtures\Dummy;
+   15: use Symfony\Component\Serializer\Tests\Fixtures\NormalizableTraversableDummy;
+   16: use Symfony\Component\Serializer\Tests\Fixtures\ScalarDummy;
+   17: use Symfony\Component\Serializer\Encoder\XmlEncoder;
+   18: use Symfony\Component\Serializer\Serializer;
+   19: use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+   20: use Symfony\Component\Serializer\Normalizer\CustomNormalizer;
+   21  
+   22  class XmlEncoderTest extends \PHPUnit_Framework_TestCase
+   ..
+   55  
+   56      /**
+   57:      * @expectedException        \Symfony\Component\Serializer\Exception\UnexpectedValueException
+   58       * @expectedExceptionMessage Document types are not allowed.
+   59       */
+   ..
+  422  
+  423      /**
+  424:      * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+  425       */
+  426      public function testDecodeInvalidXml()
+  ...
+  450      public function testDecodeEmptyXml()
+  451      {
+  452:         $this->setExpectedException('Symfony\Component\Serializer\Exception\UnexpectedValueException', 'Invalid XML data, it can not be empty.');
+  453          $this->encoder->decode(' ', 'xml');
+  454      }
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/AbstractNormalizerDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14: use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/CircularReferenceDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/DenormalizableDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14: use Symfony\Component\Serializer\Normalizer\DenormalizableInterface;
+   15: use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
+   16  
+   17  class DenormalizableDummy implements DenormalizableInterface
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/Dummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14: use Symfony\Component\Serializer\Normalizer\NormalizableInterface;
+   15: use Symfony\Component\Serializer\Normalizer\DenormalizableInterface;
+   16: use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+   17: use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
+   18  
+   19  class Dummy implements NormalizableInterface, DenormalizableInterface
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/GroupDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14: use Symfony\Component\Serializer\Annotation\Groups;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/GroupDummyInterface.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14: use Symfony\Component\Serializer\Annotation\Groups;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/GroupDummyParent.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14: use Symfony\Component\Serializer\Annotation\Groups;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/NormalizableTraversableDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14: use Symfony\Component\Serializer\Normalizer\NormalizableInterface;
+   15: use Symfony\Component\Serializer\Normalizer\DenormalizableInterface;
+   16: use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+   17: use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
+   18  
+   19  class NormalizableTraversableDummy extends TraversableDummy implements NormalizableInterface, DenormalizableInterface
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/PropertyCircularReferenceDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/PropertySiblingHolder.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/ProxyDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/ScalarDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14: use Symfony\Component\Serializer\Normalizer\NormalizableInterface;
+   15: use Symfony\Component\Serializer\Normalizer\DenormalizableInterface;
+   16: use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+   17: use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
+   18  
+   19  class ScalarDummy implements NormalizableInterface, DenormalizableInterface
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/serialization.xml:
+    5                      xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping http://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd">
+    6  
+    7:     <class name="Symfony\Component\Serializer\Tests\Fixtures\GroupDummy">
+    8          <attribute name="foo">
+    9              <group>group1</group>
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/serialization.yml:
+    1: Symfony\Component\Serializer\Tests\Fixtures\GroupDummy:
+    2    attributes:
+    3      foo:
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/SiblingHolder.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/ToBeProxyfiedDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/TraversableDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14  class TraversableDummy implements \IteratorAggregate
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Fixtures/VariadicConstructorArgsDummy.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Fixtures;
+   13  
+   14  class VariadicConstructorArgsDummy
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Mapping/AttributeMetadataTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Mapping;
+   13  
+   14: use Symfony\Component\Serializer\Mapping\AttributeMetadata;
+   15  
+   16  /**
+   ..
+   22      {
+   23          $attributeMetadata = new AttributeMetadata('name');
+   24:         $this->assertInstanceOf('Symfony\Component\Serializer\Mapping\AttributeMetadataInterface', $attributeMetadata);
+   25      }
+   26  
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Mapping/ClassMetadataTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Mapping;
+   13  
+   14: use Symfony\Component\Serializer\Mapping\ClassMetadata;
+   15  
+   16  /**
+   ..
+   22      {
+   23          $classMetadata = new ClassMetadata('name');
+   24:         $this->assertInstanceOf('Symfony\Component\Serializer\Mapping\ClassMetadataInterface', $classMetadata);
+   25      }
+   26  
+   ..
+   29          $classMetadata = new ClassMetadata('c');
+   30  
+   31:         $a1 = $this->getMock('Symfony\Component\Serializer\Mapping\AttributeMetadataInterface');
+   32          $a1->method('getName')->willReturn('a1');
+   33  
+   34:         $a2 = $this->getMock('Symfony\Component\Serializer\Mapping\AttributeMetadataInterface');
+   35          $a2->method('getName')->willReturn('a2');
+   36  
+   ..
+   46          $classMetadata2 = new ClassMetadata('c2');
+   47  
+   48:         $ac1 = $this->getMock('Symfony\Component\Serializer\Mapping\AttributeMetadataInterface');
+   49          $ac1->method('getName')->willReturn('a1');
+   50          $ac1->method('getGroups')->willReturn(array('a', 'b'));
+   51  
+   52:         $ac2 = $this->getMock('Symfony\Component\Serializer\Mapping\AttributeMetadataInterface');
+   53          $ac2->method('getName')->willReturn('a1');
+   54          $ac2->method('getGroups')->willReturn(array('b', 'c'));
+   ..
+   68          $classMetadata = new ClassMetadata('a');
+   69  
+   70:         $a1 = $this->getMock('Symfony\Component\Serializer\Mapping\AttributeMetadataInterface');
+   71          $a1->method('getName')->willReturn('b1');
+   72  
+   73:         $a2 = $this->getMock('Symfony\Component\Serializer\Mapping\AttributeMetadataInterface');
+   74          $a2->method('getName')->willReturn('b2');
+   75  
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Mapping/TestClassMetadataFactory.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Mapping;
+   13  
+   14: use Symfony\Component\Serializer\Mapping\AttributeMetadata;
+   15: use Symfony\Component\Serializer\Mapping\ClassMetadata;
+   16  
+   17  /**
+   ..
+   22      public static function createClassMetadata($withParent = false, $withInterface = false)
+   23      {
+   24:         $expected = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+   25  
+   26          $foo = new AttributeMetadata('foo');
+   ..
+   67      public static function createXmlCLassMetadata()
+   68      {
+   69:         $expected = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+   70  
+   71          $foo = new AttributeMetadata('foo');
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Mapping/Factory/ClassMetadataFactoryTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Mapping\Factory;
+   13  
+   14  use Doctrine\Common\Annotations\AnnotationReader;
+   15: use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+   16: use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
+   17: use Symfony\Component\Serializer\Mapping\Loader\LoaderChain;
+   18: use Symfony\Component\Serializer\Tests\Mapping\TestClassMetadataFactory;
+   19  
+   20  /**
+   ..
+   26      {
+   27          $classMetadata = new ClassMetadataFactory(new LoaderChain(array()));
+   28:         $this->assertInstanceOf('Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory', $classMetadata);
+   29      }
+   30  
+   ..
+   32      {
+   33          $factory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
+   34:         $classMetadata = $factory->getMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+   35  
+   36          $this->assertEquals(TestClassMetadataFactory::createClassMetadata(true, true), $classMetadata);
+   ..
+   40      {
+   41          $factory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
+   42:         $this->assertTrue($factory->hasMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy'));
+   43:         $this->assertTrue($factory->hasMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummyParent'));
+   44:         $this->assertTrue($factory->hasMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummyInterface'));
+   45          $this->assertFalse($factory->hasMetadataFor('Dunglas\Entity'));
+   46      }
+   ..
+   56  
+   57          $factory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()), $cache);
+   58:         $this->assertEquals('foo', $factory->getMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy'));
+   59      }
+   60  
+   ..
+   72  
+   73          $factory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()), $cache);
+   74:         $metadata = $factory->getMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+   75  
+   76          $this->assertEquals(TestClassMetadataFactory::createClassMetadata(true, true), $metadata);
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Mapping/Loader/AnnotationLoaderTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Mapping\Loader;
+   13  
+   14  use Doctrine\Common\Annotations\AnnotationReader;
+   15: use Symfony\Component\Serializer\Mapping\ClassMetadata;
+   16: use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
+   17: use Symfony\Component\Serializer\Tests\Mapping\TestClassMetadataFactory;
+   18  
+   19  /**
+   ..
+   34      public function testInterface()
+   35      {
+   36:         $this->assertInstanceOf('Symfony\Component\Serializer\Mapping\Loader\LoaderInterface', $this->loader);
+   37      }
+   38  
+   39      public function testLoadClassMetadataReturnsTrueIfSuccessful()
+   40      {
+   41:         $classMetadata = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+   42  
+   43          $this->assertTrue($this->loader->loadClassMetadata($classMetadata));
+   ..
+   46      public function testLoadClassMetadata()
+   47      {
+   48:         $classMetadata = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+   49          $this->loader->loadClassMetadata($classMetadata);
+   50  
+   ..
+   54      public function testLoadClassMetadataAndMerge()
+   55      {
+   56:         $classMetadata = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+   57:         $parentClassMetadata = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummyParent');
+   58  
+   59          $this->loader->loadClassMetadata($parentClassMetadata);
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Mapping/Loader/XmlFileLoaderTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Mapping\Loader;
+   13  
+   14: use Symfony\Component\Serializer\Mapping\Loader\XmlFileLoader;
+   15: use Symfony\Component\Serializer\Mapping\ClassMetadata;
+   16: use Symfony\Component\Serializer\Tests\Mapping\TestClassMetadataFactory;
+   17  
+   18  /**
+   ..
+   33      {
+   34          $this->loader = new XmlFileLoader(__DIR__.'/../../Fixtures/serialization.xml');
+   35:         $this->metadata = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+   36      }
+   37  
+   38      public function testInterface()
+   39      {
+   40:         $this->assertInstanceOf('Symfony\Component\Serializer\Mapping\Loader\LoaderInterface', $this->loader);
+   41      }
+   42  
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Mapping/Loader/YamlFileLoaderTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Mapping\Loader;
+   13  
+   14: use Symfony\Component\Serializer\Mapping\Loader\YamlFileLoader;
+   15: use Symfony\Component\Serializer\Mapping\ClassMetadata;
+   16: use Symfony\Component\Serializer\Tests\Mapping\TestClassMetadataFactory;
+   17  
+   18  /**
+   ..
+   33      {
+   34          $this->loader = new YamlFileLoader(__DIR__.'/../../Fixtures/serialization.yml');
+   35:         $this->metadata = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+   36      }
+   37  
+   38      public function testInterface()
+   39      {
+   40:         $this->assertInstanceOf('Symfony\Component\Serializer\Mapping\Loader\LoaderInterface', $this->loader);
+   41      }
+   42  
+   ..
+   53  
+   54      /**
+   55:      * @expectedException \Symfony\Component\Serializer\Exception\MappingException
+   56       */
+   57      public function testLoadClassMetadataReturnsThrowsInvalidMapping()
+
+/Users/safarov/htdocs/symfony-serializer/Tests/NameConverter/CamelCaseToSnakeCaseNameConverterTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\NameConverter;
+   13  
+   14: use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+   15  
+   16  /**
+   ..
+   22      {
+   23          $attributeMetadata = new CamelCaseToSnakeCaseNameConverter();
+   24:         $this->assertInstanceOf('Symfony\Component\Serializer\NameConverter\NameConverterInterface', $attributeMetadata);
+   25      }
+   26  
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Normalizer/AbstractNormalizerTest.php:
+    1  <?php
+    2  
+    3: namespace Symfony\Component\Serializer\Tests\Normalizer;
+    4  
+    5: use Symfony\Component\Serializer\Mapping\AttributeMetadata;
+    6: use Symfony\Component\Serializer\Mapping\ClassMetadata;
+    7: use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
+    8: use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
+    9: use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+   10: use Symfony\Component\Serializer\Tests\Fixtures\AbstractNormalizerDummy;
+   11: use Symfony\Component\Serializer\Tests\Fixtures\ProxyDummy;
+   12  
+   13  /**
+   ..
+   30      protected function setUp()
+   31      {
+   32:         $loader = $this->getMock('Symfony\Component\Serializer\Mapping\Loader\LoaderChain', array(), array(array()));
+   33:         $this->classMetadata = $this->getMock('Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory', array(), array($loader));
+   34          $this->normalizer = new AbstractNormalizerDummy($this->classMetadata);
+   35      }
+   ..
+  100  
+  101          $normalizer = new ObjectNormalizer();
+  102:         $normalizer->denormalize(array('foo' => 'bar'), 'Symfony\Component\Serializer\Tests\Fixtures\ToBeProxyfiedDummy', null, $context);
+  103  
+  104          $this->assertSame('bar', $proxyDummy->getFoo());
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Normalizer/CustomNormalizerTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Normalizer;
+   13  
+   14: use Symfony\Component\Serializer\Tests\Fixtures\ScalarDummy;
+   15: use Symfony\Component\Serializer\Normalizer\CustomNormalizer;
+   16: use Symfony\Component\Serializer\Serializer;
+   17  
+   18  class CustomNormalizerTest extends \PHPUnit_Framework_TestCase
+   ..
+   31      public function testInterface()
+   32      {
+   33:         $this->assertInstanceOf('Symfony\Component\Serializer\Normalizer\NormalizerInterface', $this->normalizer);
+   34:         $this->assertInstanceOf('Symfony\Component\Serializer\Normalizer\DenormalizerInterface', $this->normalizer);
+   35      }
+   36  
+   ..
+   63      public function testSupportsDenormalization()
+   64      {
+   65:         $this->assertTrue($this->normalizer->supportsDenormalization(array(), 'Symfony\Component\Serializer\Tests\Fixtures\ScalarDummy'));
+   66          $this->assertFalse($this->normalizer->supportsDenormalization(array(), 'stdClass'));
+   67:         $this->assertTrue($this->normalizer->supportsDenormalization(array(), 'Symfony\Component\Serializer\Tests\Fixtures\DenormalizableDummy'));
+   68      }
+   69  }
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Normalizer/GetSetMethodNormalizerTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Normalizer;
+   13  
+   14  use Doctrine\Common\Annotations\AnnotationReader;
+   15: use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+   16: use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+   17: use Symfony\Component\Serializer\Serializer;
+   18: use Symfony\Component\Serializer\SerializerInterface;
+   19: use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+   20: use Symfony\Component\Serializer\Tests\Fixtures\CircularReferenceDummy;
+   21: use Symfony\Component\Serializer\Tests\Fixtures\SiblingHolder;
+   22: use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
+   23: use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+   24: use Symfony\Component\Serializer\Tests\Fixtures\GroupDummy;
+   25  
+   26  class GetSetMethodNormalizerTest extends \PHPUnit_Framework_TestCase
+   ..
+   44      public function testInterface()
+   45      {
+   46:         $this->assertInstanceOf('Symfony\Component\Serializer\Normalizer\NormalizerInterface', $this->normalizer);
+   47:         $this->assertInstanceOf('Symfony\Component\Serializer\Normalizer\DenormalizerInterface', $this->normalizer);
+   48      }
+   49  
+   ..
+  229          $obj = $this->normalizer->denormalize(
+  230              array('foo' => array(1, 2, 3)),
+  231:             'Symfony\Component\Serializer\Tests\Fixtures\VariadicConstructorArgsDummy', 'any');
+  232          $this->assertEquals(array(1, 2, 3), $obj->getFoo());
+  233      }
+  ...
+  240          $obj = $this->normalizer->denormalize(
+  241              array(),
+  242:             'Symfony\Component\Serializer\Tests\Fixtures\VariadicConstructorArgsDummy', 'any');
+  243          $this->assertEquals(array(), $obj->getFoo());
+  244      }
+  ...
+  303          $normalized = $this->normalizer->denormalize(
+  304              $toNormalize,
+  305:             'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+  306              null,
+  307              array(GetSetMethodNormalizer::GROUPS => array('a'))
+  ...
+  313          $normalized = $this->normalizer->denormalize(
+  314              $toNormalize,
+  315:             'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+  316              null,
+  317              array(GetSetMethodNormalizer::GROUPS => array('a', 'b'))
+  ...
+  358                  'symfony' => '@coopTilleuls',
+  359                  'coop_tilleuls' => 'les-tilleuls.coop',
+  360:             ), 'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy', null, array(GetSetMethodNormalizer::GROUPS => array('name_converter')))
+  361          );
+  362      }
+  ...
+  466  
+  467      /**
+  468:      * @expectedException \Symfony\Component\Serializer\Exception\LogicException
+  469       * @expectedExceptionMessage Cannot normalize attribute "object" because injected serializer is not a normalizer
+  470       */
+  471      public function testUnableToNormalizeObjectAttribute()
+  472      {
+  473:         $serializer = $this->getMock('Symfony\Component\Serializer\SerializerInterface');
+  474          $this->normalizer->setSerializer($serializer);
+  475  
+  ...
+  482  
+  483      /**
+  484:      * @expectedException \Symfony\Component\Serializer\Exception\CircularReferenceException
+  485       */
+  486      public function testUnableToNormalizeCircularReference()
+  ...
+  520          $obj = new CircularReferenceDummy();
+  521  
+  522:         $expected = array('me' => 'Symfony\Component\Serializer\Tests\Fixtures\CircularReferenceDummy');
+  523          $this->assertEquals($expected, $this->normalizer->normalize($obj));
+  524      }
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Normalizer/ObjectNormalizerTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Normalizer;
+   13  
+   14  use Doctrine\Common\Annotations\AnnotationReader;
+   15: use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+   16: use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+   17: use Symfony\Component\Serializer\Serializer;
+   18: use Symfony\Component\Serializer\SerializerInterface;
+   19: use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+   20: use Symfony\Component\Serializer\Tests\Fixtures\CircularReferenceDummy;
+   21: use Symfony\Component\Serializer\Tests\Fixtures\SiblingHolder;
+   22: use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
+   23: use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+   24: use Symfony\Component\Serializer\Tests\Fixtures\GroupDummy;
+   25  
+   26  /**
+   ..
+  223          $normalized = $this->normalizer->denormalize(
+  224              $toNormalize,
+  225:             'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+  226              null,
+  227              array(ObjectNormalizer::GROUPS => array('a'))
+  ...
+  233          $normalized = $this->normalizer->denormalize(
+  234              $toNormalize,
+  235:             'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+  236              null,
+  237              array(ObjectNormalizer::GROUPS => array('a', 'b'))
+  ...
+  278                  'symfony' => '@coopTilleuls',
+  279                  'coop_tilleuls' => 'les-tilleuls.coop',
+  280:             ), 'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy', null, array(ObjectNormalizer::GROUPS => array('name_converter')))
+  281          );
+  282      }
+  ...
+  400  
+  401      /**
+  402:      * @expectedException \Symfony\Component\Serializer\Exception\LogicException
+  403       * @expectedExceptionMessage Cannot normalize attribute "object" because injected serializer is not a normalizer
+  404       */
+  405      public function testUnableToNormalizeObjectAttribute()
+  406      {
+  407:         $serializer = $this->getMock('Symfony\Component\Serializer\SerializerInterface');
+  408          $this->normalizer->setSerializer($serializer);
+  409  
+  ...
+  416  
+  417      /**
+  418:      * @expectedException \Symfony\Component\Serializer\Exception\CircularReferenceException
+  419       */
+  420      public function testUnableToNormalizeCircularReference()
+  ...
+  454          $obj = new CircularReferenceDummy();
+  455  
+  456:         $expected = array('me' => 'Symfony\Component\Serializer\Tests\Fixtures\CircularReferenceDummy');
+  457          $this->assertEquals($expected, $this->normalizer->normalize($obj));
+  458      }
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Normalizer/PropertyNormalizerTest.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Normalizer;
+   13  
+   14  use Doctrine\Common\Annotations\AnnotationReader;
+   15: use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+   16: use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
+   17: use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+   18: use Symfony\Component\Serializer\Normalizer\PropertyNormalizer;
+   19: use Symfony\Component\Serializer\Serializer;
+   20: use Symfony\Component\Serializer\SerializerInterface;
+   21: use Symfony\Component\Serializer\Tests\Fixtures\GroupDummy;
+   22: use Symfony\Component\Serializer\Tests\Fixtures\PropertyCircularReferenceDummy;
+   23: use Symfony\Component\Serializer\Tests\Fixtures\PropertySiblingHolder;
+   24  
+   25  class PropertyNormalizerTest extends \PHPUnit_Framework_TestCase
+   ..
+   36      protected function setUp()
+   37      {
+   38:         $this->serializer = $this->getMock('Symfony\Component\Serializer\SerializerInterface');
+   39          $this->normalizer = new PropertyNormalizer();
+   40          $this->normalizer->setSerializer($this->serializer);
+   ..
+  239          $normalized = $this->normalizer->denormalize(
+  240              $toNormalize,
+  241:             'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+  242              null,
+  243              array(PropertyNormalizer::GROUPS => array('a'))
+  ...
+  249          $normalized = $this->normalizer->denormalize(
+  250              $toNormalize,
+  251:             'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+  252              null,
+  253              array(PropertyNormalizer::GROUPS => array('a', 'b'))
+  ...
+  294                  'symfony' => '@coopTilleuls',
+  295                  'coop_tilleuls' => 'les-tilleuls.coop',
+  296:             ), 'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy', null, array(PropertyNormalizer::GROUPS => array('name_converter')))
+  297          );
+  298      }
+  ...
+  360  
+  361      /**
+  362:      * @expectedException \Symfony\Component\Serializer\Exception\CircularReferenceException
+  363       */
+  364      public function testUnableToNormalizeCircularReference()
+  ...
+  398          $obj = new PropertyCircularReferenceDummy();
+  399  
+  400:         $expected = array('me' => 'Symfony\Component\Serializer\Tests\Fixtures\PropertyCircularReferenceDummy');
+  401          $this->assertEquals($expected, $this->normalizer->normalize($obj));
+  402      }
+  ...
+  419  
+  420      /**
+  421:      * @expectedException \Symfony\Component\Serializer\Exception\LogicException
+  422       * @expectedExceptionMessage Cannot normalize attribute "bar" because injected serializer is not a normalizer
+  423       */
+  424      public function testUnableToNormalizeObjectAttribute()
+  425      {
+  426:         $serializer = $this->getMock('Symfony\Component\Serializer\SerializerInterface');
+  427          $this->normalizer->setSerializer($serializer);
+  428  
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Normalizer/TestDenormalizer.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Normalizer;
+   13  
+   14: use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
+   15  
+   16  /**
+
+/Users/safarov/htdocs/symfony-serializer/Tests/Normalizer/TestNormalizer.php:
+   10   */
+   11  
+   12: namespace Symfony\Component\Serializer\Tests\Normalizer;
+   13  
+   14: use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+   15  
+   16  /**
+
+344 matches across 83 files

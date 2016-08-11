@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Normalizer;
+namespace Seferov\Component\Serializer\Tests\Normalizer;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
-use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
-use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
-use Symfony\Component\Serializer\Normalizer\PropertyNormalizer;
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\SerializerInterface;
-use Symfony\Component\Serializer\Tests\Fixtures\GroupDummy;
-use Symfony\Component\Serializer\Tests\Fixtures\PropertyCircularReferenceDummy;
-use Symfony\Component\Serializer\Tests\Fixtures\PropertySiblingHolder;
+use Seferov\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+use Seferov\Component\Serializer\Mapping\Loader\AnnotationLoader;
+use Seferov\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+use Seferov\Component\Serializer\Normalizer\PropertyNormalizer;
+use Seferov\Component\Serializer\Serializer;
+use Seferov\Component\Serializer\SerializerInterface;
+use Seferov\Component\Serializer\Tests\Fixtures\GroupDummy;
+use Seferov\Component\Serializer\Tests\Fixtures\PropertyCircularReferenceDummy;
+use Seferov\Component\Serializer\Tests\Fixtures\PropertySiblingHolder;
 
 class PropertyNormalizerTest extends \PHPUnit_Framework_TestCase
 {
@@ -35,7 +35,7 @@ class PropertyNormalizerTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->serializer = $this->getMock('Symfony\Component\Serializer\SerializerInterface');
+        $this->serializer = $this->getMock('Seferov\Component\Serializer\SerializerInterface');
         $this->normalizer = new PropertyNormalizer();
         $this->normalizer->setSerializer($this->serializer);
     }
@@ -238,7 +238,7 @@ class PropertyNormalizerTest extends \PHPUnit_Framework_TestCase
 
         $normalized = $this->normalizer->denormalize(
             $toNormalize,
-            'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+            'Seferov\Component\Serializer\Tests\Fixtures\GroupDummy',
             null,
             array(PropertyNormalizer::GROUPS => array('a'))
         );
@@ -248,7 +248,7 @@ class PropertyNormalizerTest extends \PHPUnit_Framework_TestCase
 
         $normalized = $this->normalizer->denormalize(
             $toNormalize,
-            'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+            'Seferov\Component\Serializer\Tests\Fixtures\GroupDummy',
             null,
             array(PropertyNormalizer::GROUPS => array('a', 'b'))
         );
@@ -293,7 +293,7 @@ class PropertyNormalizerTest extends \PHPUnit_Framework_TestCase
                 'foo_bar' => '@dunglas',
                 'symfony' => '@coopTilleuls',
                 'coop_tilleuls' => 'les-tilleuls.coop',
-            ), 'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy', null, array(PropertyNormalizer::GROUPS => array('name_converter')))
+            ), 'Seferov\Component\Serializer\Tests\Fixtures\GroupDummy', null, array(PropertyNormalizer::GROUPS => array('name_converter')))
         );
     }
 
@@ -359,7 +359,7 @@ class PropertyNormalizerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\CircularReferenceException
+     * @expectedException \Seferov\Component\Serializer\Exception\CircularReferenceException
      */
     public function testUnableToNormalizeCircularReference()
     {
@@ -397,7 +397,7 @@ class PropertyNormalizerTest extends \PHPUnit_Framework_TestCase
 
         $obj = new PropertyCircularReferenceDummy();
 
-        $expected = array('me' => 'Symfony\Component\Serializer\Tests\Fixtures\PropertyCircularReferenceDummy');
+        $expected = array('me' => 'Seferov\Component\Serializer\Tests\Fixtures\PropertyCircularReferenceDummy');
         $this->assertEquals($expected, $this->normalizer->normalize($obj));
     }
 
@@ -418,12 +418,12 @@ class PropertyNormalizerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\LogicException
+     * @expectedException \Seferov\Component\Serializer\Exception\LogicException
      * @expectedExceptionMessage Cannot normalize attribute "bar" because injected serializer is not a normalizer
      */
     public function testUnableToNormalizeObjectAttribute()
     {
-        $serializer = $this->getMock('Symfony\Component\Serializer\SerializerInterface');
+        $serializer = $this->getMock('Seferov\Component\Serializer\SerializerInterface');
         $this->normalizer->setSerializer($serializer);
 
         $obj = new PropertyDummy();

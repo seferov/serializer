@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Normalizer;
+namespace Seferov\Component\Serializer\Tests\Normalizer;
 
-use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Seferov\Component\Serializer\Normalizer\NormalizerInterface;
 
 /**
  * Provides a test Normalizer which only implements the NormalizerInterface.

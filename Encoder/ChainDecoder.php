@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Encoder;
+namespace Seferov\Component\Serializer\Encoder;
 
-use Symfony\Component\Serializer\Exception\RuntimeException;
+use Seferov\Component\Serializer\Exception\RuntimeException;
 
 /**
  * Decoder delegating the decoding to a chain of decoders.

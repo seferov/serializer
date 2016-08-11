@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Mapping\Loader;
+namespace Seferov\Component\Serializer\Mapping\Loader;
 
-use Symfony\Component\Serializer\Exception\MappingException;
+use Seferov\Component\Serializer\Exception\MappingException;
 
 /**
  * Base class for all file based loaders.

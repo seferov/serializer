@@ -1,14 +1,14 @@
 <?php
 
-namespace Symfony\Component\Serializer\Tests\Normalizer;
+namespace Seferov\Component\Serializer\Tests\Normalizer;
 
-use Symfony\Component\Serializer\Mapping\AttributeMetadata;
-use Symfony\Component\Serializer\Mapping\ClassMetadata;
-use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
-use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Tests\Fixtures\AbstractNormalizerDummy;
-use Symfony\Component\Serializer\Tests\Fixtures\ProxyDummy;
+use Seferov\Component\Serializer\Mapping\AttributeMetadata;
+use Seferov\Component\Serializer\Mapping\ClassMetadata;
+use Seferov\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
+use Seferov\Component\Serializer\Normalizer\AbstractNormalizer;
+use Seferov\Component\Serializer\Normalizer\ObjectNormalizer;
+use Seferov\Component\Serializer\Tests\Fixtures\AbstractNormalizerDummy;
+use Seferov\Component\Serializer\Tests\Fixtures\ProxyDummy;
 
 /**
  * Provides a dummy Normalizer which extends the AbstractNormalizer.
@@ -29,8 +29,8 @@ class AbstractNormalizerTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $loader = $this->getMock('Symfony\Component\Serializer\Mapping\Loader\LoaderChain', array(), array(array()));
-        $this->classMetadata = $this->getMock('Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory', array(), array($loader));
+        $loader = $this->getMock('Seferov\Component\Serializer\Mapping\Loader\LoaderChain', array(), array(array()));
+        $this->classMetadata = $this->getMock('Seferov\Component\Serializer\Mapping\Factory\ClassMetadataFactory', array(), array($loader));
         $this->normalizer = new AbstractNormalizerDummy($this->classMetadata);
     }
 
@@ -99,7 +99,7 @@ class AbstractNormalizerTest extends \PHPUnit_Framework_TestCase
         $context = array(AbstractNormalizer::OBJECT_TO_POPULATE => $proxyDummy);
 
         $normalizer = new ObjectNormalizer();
-        $normalizer->denormalize(array('foo' => 'bar'), 'Symfony\Component\Serializer\Tests\Fixtures\ToBeProxyfiedDummy', null, $context);
+        $normalizer->denormalize(array('foo' => 'bar'), 'Seferov\Component\Serializer\Tests\Fixtures\ToBeProxyfiedDummy', null, $context);
 
         $this->assertSame('bar', $proxyDummy->getFoo());
     }

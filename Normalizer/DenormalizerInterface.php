@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Normalizer;
+namespace Seferov\Component\Serializer\Normalizer;
 
 /**
  * Defines the interface of denormalizers.

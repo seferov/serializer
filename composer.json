@@ -1,9 +1,8 @@
 {
-    "name": "symfony/serializer",
+    "name": "seferov/symfony-serializer",
     "type": "library",
-    "description": "Symfony Serializer Component",
+    "description": "Forked Symfony Serializer Component",
     "keywords": [],
-    "homepage": "https://symfony.com",
     "license": "MIT",
     "authors": [
         {
@@ -16,7 +15,7 @@
         }
     ],
     "require": {
-        "php": ">=5.3.9"
+        "php": ">=5.4"
     },
     "require-dev": {
         "symfony/yaml": "~2.0,>=2.0.5",
@@ -33,7 +32,7 @@
         "symfony/property-access": "For using the ObjectNormalizer."
     },
     "autoload": {
-        "psr-4": { "Symfony\\Component\\Serializer\\": "" },
+        "psr-4": { "Seferov\\Component\\Serializer\\": "" },
         "exclude-from-classmap": [
             "/Tests/"
         ]

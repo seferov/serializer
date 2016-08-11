@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Normalizer;
+namespace Seferov\Component\Serializer\Tests\Normalizer;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\SerializerInterface;
-use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-use Symfony\Component\Serializer\Tests\Fixtures\CircularReferenceDummy;
-use Symfony\Component\Serializer\Tests\Fixtures\SiblingHolder;
-use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
-use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
-use Symfony\Component\Serializer\Tests\Fixtures\GroupDummy;
+use Seferov\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+use Seferov\Component\Serializer\Normalizer\ObjectNormalizer;
+use Seferov\Component\Serializer\Serializer;
+use Seferov\Component\Serializer\SerializerInterface;
+use Seferov\Component\Serializer\Normalizer\NormalizerInterface;
+use Seferov\Component\Serializer\Tests\Fixtures\CircularReferenceDummy;
+use Seferov\Component\Serializer\Tests\Fixtures\SiblingHolder;
+use Seferov\Component\Serializer\Mapping\Loader\AnnotationLoader;
+use Seferov\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+use Seferov\Component\Serializer\Tests\Fixtures\GroupDummy;
 
 /**
  * @author Kévin Dunglas <dunglas@gmail.com>
@@ -222,7 +222,7 @@ class ObjectNormalizerTest extends \PHPUnit_Framework_TestCase
 
         $normalized = $this->normalizer->denormalize(
             $toNormalize,
-            'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+            'Seferov\Component\Serializer\Tests\Fixtures\GroupDummy',
             null,
             array(ObjectNormalizer::GROUPS => array('a'))
         );
@@ -232,7 +232,7 @@ class ObjectNormalizerTest extends \PHPUnit_Framework_TestCase
 
         $normalized = $this->normalizer->denormalize(
             $toNormalize,
-            'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy',
+            'Seferov\Component\Serializer\Tests\Fixtures\GroupDummy',
             null,
             array(ObjectNormalizer::GROUPS => array('a', 'b'))
         );
@@ -277,7 +277,7 @@ class ObjectNormalizerTest extends \PHPUnit_Framework_TestCase
                 'foo_bar' => '@dunglas',
                 'symfony' => '@coopTilleuls',
                 'coop_tilleuls' => 'les-tilleuls.coop',
-            ), 'Symfony\Component\Serializer\Tests\Fixtures\GroupDummy', null, array(ObjectNormalizer::GROUPS => array('name_converter')))
+            ), 'Seferov\Component\Serializer\Tests\Fixtures\GroupDummy', null, array(ObjectNormalizer::GROUPS => array('name_converter')))
         );
     }
 
@@ -399,12 +399,12 @@ class ObjectNormalizerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\LogicException
+     * @expectedException \Seferov\Component\Serializer\Exception\LogicException
      * @expectedExceptionMessage Cannot normalize attribute "object" because injected serializer is not a normalizer
      */
     public function testUnableToNormalizeObjectAttribute()
     {
-        $serializer = $this->getMock('Symfony\Component\Serializer\SerializerInterface');
+        $serializer = $this->getMock('Seferov\Component\Serializer\SerializerInterface');
         $this->normalizer->setSerializer($serializer);
 
         $obj = new ObjectDummy();
@@ -415,7 +415,7 @@ class ObjectNormalizerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\CircularReferenceException
+     * @expectedException \Seferov\Component\Serializer\Exception\CircularReferenceException
      */
     public function testUnableToNormalizeCircularReference()
     {
@@ -453,7 +453,7 @@ class ObjectNormalizerTest extends \PHPUnit_Framework_TestCase
 
         $obj = new CircularReferenceDummy();
 
-        $expected = array('me' => 'Symfony\Component\Serializer\Tests\Fixtures\CircularReferenceDummy');
+        $expected = array('me' => 'Seferov\Component\Serializer\Tests\Fixtures\CircularReferenceDummy');
         $this->assertEquals($expected, $this->normalizer->normalize($obj));
     }
 

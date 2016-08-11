@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Mapping\Loader;
+namespace Seferov\Component\Serializer\Mapping\Loader;
 
 use Doctrine\Common\Annotations\Reader;
-use Symfony\Component\Serializer\Annotation\Groups;
-use Symfony\Component\Serializer\Exception\MappingException;
-use Symfony\Component\Serializer\Mapping\AttributeMetadata;
-use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+use Seferov\Component\Serializer\Annotation\Groups;
+use Seferov\Component\Serializer\Exception\MappingException;
+use Seferov\Component\Serializer\Mapping\AttributeMetadata;
+use Seferov\Component\Serializer\Mapping\ClassMetadataInterface;
 
 /**
  * Annotation loader.

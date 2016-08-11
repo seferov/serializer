@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Normalizer;
+namespace Seferov\Component\Serializer\Normalizer;
 
-use Symfony\Component\Serializer\SerializerInterface;
-use Symfony\Component\Serializer\SerializerAwareInterface;
+use Seferov\Component\Serializer\SerializerInterface;
+use Seferov\Component\Serializer\SerializerAwareInterface;
 
 /**
  * SerializerAware Normalizer implementation.

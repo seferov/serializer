@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Fixtures;
+namespace Seferov\Component\Serializer\Tests\Fixtures;
 
-use Symfony\Component\Serializer\Normalizer\DenormalizableInterface;
-use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
+use Seferov\Component\Serializer\Normalizer\DenormalizableInterface;
+use Seferov\Component\Serializer\Normalizer\DenormalizerInterface;
 
 class DenormalizableDummy implements DenormalizableInterface
 {

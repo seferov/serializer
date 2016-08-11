@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer;
+namespace Seferov\Component\Serializer;
 
 /**
  * Defines the interface of the Serializer.

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Exception;
+namespace Seferov\Component\Serializer\Exception;
 
 /**
  * Base exception.

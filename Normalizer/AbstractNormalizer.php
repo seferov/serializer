@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Normalizer;
+namespace Seferov\Component\Serializer\Normalizer;
 
-use Symfony\Component\Serializer\Exception\CircularReferenceException;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
-use Symfony\Component\Serializer\Exception\LogicException;
-use Symfony\Component\Serializer\Exception\RuntimeException;
-use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
-use Symfony\Component\Serializer\Mapping\AttributeMetadataInterface;
-use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
-use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
+use Seferov\Component\Serializer\Exception\CircularReferenceException;
+use Seferov\Component\Serializer\Exception\InvalidArgumentException;
+use Seferov\Component\Serializer\Exception\LogicException;
+use Seferov\Component\Serializer\Exception\RuntimeException;
+use Seferov\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
+use Seferov\Component\Serializer\Mapping\AttributeMetadataInterface;
+use Seferov\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+use Seferov\Component\Serializer\NameConverter\NameConverterInterface;
 
 /**
  * Normalizer implementation.
@@ -153,7 +153,7 @@ abstract class AbstractNormalizer extends SerializerAwareNormalizer implements N
     /**
      * Set attributes to be camelized on denormalize.
      *
-     * @deprecated Deprecated since version 2.7, to be removed in 3.0. Use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.
+     * @deprecated Deprecated since version 2.7, to be removed in 3.0. Use Seferov\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.
      *
      * @param array $camelizedAttributes
      *
@@ -163,7 +163,7 @@ abstract class AbstractNormalizer extends SerializerAwareNormalizer implements N
      */
     public function setCamelizedAttributes(array $camelizedAttributes)
     {
-        @trigger_error(sprintf('%s is deprecated since version 2.7 and will be removed in 3.0. Use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.', __METHOD__), E_USER_DEPRECATED);
+        @trigger_error(sprintf('%s is deprecated since version 2.7 and will be removed in 3.0. Use Seferov\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.', __METHOD__), E_USER_DEPRECATED);
 
         if ($this->nameConverter && !$this->nameConverter instanceof CamelCaseToSnakeCaseNameConverter) {
             throw new LogicException(sprintf('%s cannot be called if a custom Name Converter is defined.', __METHOD__));
@@ -234,7 +234,7 @@ abstract class AbstractNormalizer extends SerializerAwareNormalizer implements N
     /**
      * Format an attribute name, for example to convert a snake_case name to camelCase.
      *
-     * @deprecated Deprecated since version 2.7, to be removed in 3.0. Use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.
+     * @deprecated Deprecated since version 2.7, to be removed in 3.0. Use Seferov\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.
      *
      * @param string $attributeName
      *
@@ -242,7 +242,7 @@ abstract class AbstractNormalizer extends SerializerAwareNormalizer implements N
      */
     protected function formatAttribute($attributeName)
     {
-        @trigger_error(sprintf('%s is deprecated since version 2.7 and will be removed in 3.0. Use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.', __METHOD__), E_USER_DEPRECATED);
+        @trigger_error(sprintf('%s is deprecated since version 2.7 and will be removed in 3.0. Use Seferov\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter instead.', __METHOD__), E_USER_DEPRECATED);
 
         return $this->nameConverter ? $this->nameConverter->normalize($attributeName) : $attributeName;
     }

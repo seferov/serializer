@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Mapping\Factory;
+namespace Seferov\Component\Serializer\Mapping\Factory;
 
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
-use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+use Seferov\Component\Serializer\Exception\InvalidArgumentException;
+use Seferov\Component\Serializer\Mapping\ClassMetadataInterface;
 
 /**
  * Returns a {@see ClassMetadataInterface}.
@@ -31,7 +31,7 @@ interface ClassMetadataFactoryInterface
      *
      * Otherwise, a new metadata instance is created. If the factory was
      * configured with a loader, the metadata is passed to the
-     * {@link \Symfony\Component\Serializer\Mapping\Loader\LoaderInterface::loadClassMetadata()} method for further
+     * {@link \Seferov\Component\Serializer\Mapping\Loader\LoaderInterface::loadClassMetadata()} method for further
      * configuration. At last, the new object is returned.
      *
      * @param string|object $value

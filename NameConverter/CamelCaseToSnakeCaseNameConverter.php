@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\NameConverter;
+namespace Seferov\Component\Serializer\NameConverter;
 
 /**
  * CamelCase to Underscore name converter.

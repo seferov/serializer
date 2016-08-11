@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Annotation;
+namespace Seferov\Component\Serializer\Annotation;
 
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Seferov\Component\Serializer\Exception\InvalidArgumentException;
 
 /**
  * Annotation class for @Groups().

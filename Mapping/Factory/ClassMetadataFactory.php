@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Mapping\Factory;
+namespace Seferov\Component\Serializer\Mapping\Factory;
 
 use Doctrine\Common\Cache\Cache;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
-use Symfony\Component\Serializer\Mapping\ClassMetadata;
-use Symfony\Component\Serializer\Mapping\Loader\LoaderInterface;
+use Seferov\Component\Serializer\Exception\InvalidArgumentException;
+use Seferov\Component\Serializer\Mapping\ClassMetadata;
+use Seferov\Component\Serializer\Mapping\Loader\LoaderInterface;
 
 /**
  * Returns a {@link ClassMetadata}.

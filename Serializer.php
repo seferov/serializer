@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer;
+namespace Seferov\Component\Serializer;
 
-use Symfony\Component\Serializer\Encoder\ChainDecoder;
-use Symfony\Component\Serializer\Encoder\ChainEncoder;
-use Symfony\Component\Serializer\Encoder\EncoderInterface;
-use Symfony\Component\Serializer\Encoder\DecoderInterface;
-use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
-use Symfony\Component\Serializer\Exception\LogicException;
-use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+use Seferov\Component\Serializer\Encoder\ChainDecoder;
+use Seferov\Component\Serializer\Encoder\ChainEncoder;
+use Seferov\Component\Serializer\Encoder\EncoderInterface;
+use Seferov\Component\Serializer\Encoder\DecoderInterface;
+use Seferov\Component\Serializer\Normalizer\NormalizerInterface;
+use Seferov\Component\Serializer\Normalizer\DenormalizerInterface;
+use Seferov\Component\Serializer\Exception\LogicException;
+use Seferov\Component\Serializer\Exception\UnexpectedValueException;
 
 /**
  * Serializer serializes and deserializes data.

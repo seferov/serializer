@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Normalizer;
+namespace Seferov\Component\Serializer\Normalizer;
 
 use Symfony\Component\PropertyAccess\Exception\NoSuchPropertyException;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyAccess\PropertyAccessorInterface;
-use Symfony\Component\Serializer\Exception\CircularReferenceException;
-use Symfony\Component\Serializer\Exception\LogicException;
-use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
-use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
+use Seferov\Component\Serializer\Exception\CircularReferenceException;
+use Seferov\Component\Serializer\Exception\LogicException;
+use Seferov\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
+use Seferov\Component\Serializer\NameConverter\NameConverterInterface;
 
 /**
  * Converts between objects and arrays using the PropertyAccess component.

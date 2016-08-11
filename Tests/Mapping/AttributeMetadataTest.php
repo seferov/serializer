@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Mapping;
+namespace Seferov\Component\Serializer\Tests\Mapping;
 
-use Symfony\Component\Serializer\Mapping\AttributeMetadata;
+use Seferov\Component\Serializer\Mapping\AttributeMetadata;
 
 /**
  * @author Kévin Dunglas <dunglas@gmail.com>
@@ -21,7 +21,7 @@ class AttributeMetadataTest extends \PHPUnit_Framework_TestCase
     public function testInterface()
     {
         $attributeMetadata = new AttributeMetadata('name');
-        $this->assertInstanceOf('Symfony\Component\Serializer\Mapping\AttributeMetadataInterface', $attributeMetadata);
+        $this->assertInstanceOf('Seferov\Component\Serializer\Mapping\AttributeMetadataInterface', $attributeMetadata);
     }
 
     public function testGetName()

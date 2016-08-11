@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Encoder;
+namespace Seferov\Component\Serializer\Tests\Encoder;
 
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Normalizer\CustomNormalizer;
+use Seferov\Component\Serializer\Encoder\JsonEncoder;
+use Seferov\Component\Serializer\Serializer;
+use Seferov\Component\Serializer\Normalizer\CustomNormalizer;
 
 class JsonEncoderTest extends \PHPUnit_Framework_TestCase
 {

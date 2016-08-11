@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Annotation;
+namespace Seferov\Component\Serializer\Tests\Annotation;
 
-use Symfony\Component\Serializer\Annotation\Groups;
+use Seferov\Component\Serializer\Annotation\Groups;
 
 /**
  * @author Kévin Dunglas <dunglas@gmail.com>
@@ -19,7 +19,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 class GroupsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\InvalidArgumentException
+     * @expectedException \Seferov\Component\Serializer\Exception\InvalidArgumentException
      */
     public function testEmptyGroupsParameter()
     {
@@ -27,7 +27,7 @@ class GroupsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\InvalidArgumentException
+     * @expectedException \Seferov\Component\Serializer\Exception\InvalidArgumentException
      */
     public function testNotAnArrayGroupsParameter()
     {
@@ -35,7 +35,7 @@ class GroupsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\InvalidArgumentException
+     * @expectedException \Seferov\Component\Serializer\Exception\InvalidArgumentException
      */
     public function testInvalidGroupsParameter()
     {

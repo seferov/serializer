@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Encoder;
+namespace Seferov\Component\Serializer\Encoder;
 
-use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+use Seferov\Component\Serializer\Exception\UnexpectedValueException;
 
 /**
  * Defines the interface of encoders.

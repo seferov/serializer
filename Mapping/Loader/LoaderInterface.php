@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Mapping\Loader;
+namespace Seferov\Component\Serializer\Mapping\Loader;
 
-use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+use Seferov\Component\Serializer\Mapping\ClassMetadataInterface;
 
 /**
  * Loads {@link ClassMetadataInterface}.

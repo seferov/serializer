@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Mapping\Factory;
+namespace Seferov\Component\Serializer\Tests\Mapping\Factory;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
-use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
-use Symfony\Component\Serializer\Mapping\Loader\LoaderChain;
-use Symfony\Component\Serializer\Tests\Mapping\TestClassMetadataFactory;
+use Seferov\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+use Seferov\Component\Serializer\Mapping\Loader\AnnotationLoader;
+use Seferov\Component\Serializer\Mapping\Loader\LoaderChain;
+use Seferov\Component\Serializer\Tests\Mapping\TestClassMetadataFactory;
 
 /**
  * @author Kévin Dunglas <dunglas@gmail.com>
@@ -25,13 +25,13 @@ class ClassMetadataFactoryTest extends \PHPUnit_Framework_TestCase
     public function testInterface()
     {
         $classMetadata = new ClassMetadataFactory(new LoaderChain(array()));
-        $this->assertInstanceOf('Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory', $classMetadata);
+        $this->assertInstanceOf('Seferov\Component\Serializer\Mapping\Factory\ClassMetadataFactory', $classMetadata);
     }
 
     public function testGetMetadataFor()
     {
         $factory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
-        $classMetadata = $factory->getMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+        $classMetadata = $factory->getMetadataFor('Seferov\Component\Serializer\Tests\Fixtures\GroupDummy');
 
         $this->assertEquals(TestClassMetadataFactory::createClassMetadata(true, true), $classMetadata);
     }
@@ -39,9 +39,9 @@ class ClassMetadataFactoryTest extends \PHPUnit_Framework_TestCase
     public function testHasMetadataFor()
     {
         $factory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
-        $this->assertTrue($factory->hasMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy'));
-        $this->assertTrue($factory->hasMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummyParent'));
-        $this->assertTrue($factory->hasMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummyInterface'));
+        $this->assertTrue($factory->hasMetadataFor('Seferov\Component\Serializer\Tests\Fixtures\GroupDummy'));
+        $this->assertTrue($factory->hasMetadataFor('Seferov\Component\Serializer\Tests\Fixtures\GroupDummyParent'));
+        $this->assertTrue($factory->hasMetadataFor('Seferov\Component\Serializer\Tests\Fixtures\GroupDummyInterface'));
         $this->assertFalse($factory->hasMetadataFor('Dunglas\Entity'));
     }
 
@@ -55,7 +55,7 @@ class ClassMetadataFactoryTest extends \PHPUnit_Framework_TestCase
         ;
 
         $factory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()), $cache);
-        $this->assertEquals('foo', $factory->getMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy'));
+        $this->assertEquals('foo', $factory->getMetadataFor('Seferov\Component\Serializer\Tests\Fixtures\GroupDummy'));
     }
 
     public function testCacheNotExists()
@@ -71,7 +71,7 @@ class ClassMetadataFactoryTest extends \PHPUnit_Framework_TestCase
         ;
 
         $factory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()), $cache);
-        $metadata = $factory->getMetadataFor('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+        $metadata = $factory->getMetadataFor('Seferov\Component\Serializer\Tests\Fixtures\GroupDummy');
 
         $this->assertEquals(TestClassMetadataFactory::createClassMetadata(true, true), $metadata);
     }

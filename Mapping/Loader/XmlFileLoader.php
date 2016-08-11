@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Mapping\Loader;
+namespace Seferov\Component\Serializer\Mapping\Loader;
 
-use Symfony\Component\Config\Util\XmlUtils;
-use Symfony\Component\Serializer\Exception\MappingException;
-use Symfony\Component\Serializer\Mapping\AttributeMetadata;
-use Symfony\Component\Serializer\Mapping\ClassMetadataInterface;
+use Seferov\Component\Config\Util\XmlUtils;
+use Seferov\Component\Serializer\Exception\MappingException;
+use Seferov\Component\Serializer\Mapping\AttributeMetadata;
+use Seferov\Component\Serializer\Mapping\ClassMetadataInterface;
 
 /**
  * Loads XML mapping files.

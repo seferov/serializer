@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Fixtures;
+namespace Seferov\Component\Serializer\Tests\Fixtures;
 
-use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
+use Seferov\Component\Serializer\Normalizer\AbstractNormalizer;
 
 /**
  * Provides a dummy Normalizer which extends the AbstractNormalizer.

@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Fixtures;
+namespace Seferov\Component\Serializer\Tests\Fixtures;
 
-use Symfony\Component\Serializer\Normalizer\NormalizableInterface;
-use Symfony\Component\Serializer\Normalizer\DenormalizableInterface;
-use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
+use Seferov\Component\Serializer\Normalizer\NormalizableInterface;
+use Seferov\Component\Serializer\Normalizer\DenormalizableInterface;
+use Seferov\Component\Serializer\Normalizer\NormalizerInterface;
+use Seferov\Component\Serializer\Normalizer\DenormalizerInterface;
 
 class ScalarDummy implements NormalizableInterface, DenormalizableInterface
 {

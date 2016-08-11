@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Encoder;
+namespace Seferov\Component\Serializer\Tests\Encoder;
 
-use Symfony\Component\Serializer\Tests\Fixtures\Dummy;
-use Symfony\Component\Serializer\Tests\Fixtures\NormalizableTraversableDummy;
-use Symfony\Component\Serializer\Tests\Fixtures\ScalarDummy;
-use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Exception\UnexpectedValueException;
-use Symfony\Component\Serializer\Normalizer\CustomNormalizer;
+use Seferov\Component\Serializer\Tests\Fixtures\Dummy;
+use Seferov\Component\Serializer\Tests\Fixtures\NormalizableTraversableDummy;
+use Seferov\Component\Serializer\Tests\Fixtures\ScalarDummy;
+use Seferov\Component\Serializer\Encoder\XmlEncoder;
+use Seferov\Component\Serializer\Serializer;
+use Seferov\Component\Serializer\Exception\UnexpectedValueException;
+use Seferov\Component\Serializer\Normalizer\CustomNormalizer;
 
 class XmlEncoderTest extends \PHPUnit_Framework_TestCase
 {
@@ -54,7 +54,7 @@ class XmlEncoderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException        \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @expectedException        \Seferov\Component\Serializer\Exception\UnexpectedValueException
      * @expectedExceptionMessage Document types are not allowed.
      */
     public function testDocTypeIsNotAllowed()
@@ -421,7 +421,7 @@ XML;
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @expectedException \Seferov\Component\Serializer\Exception\UnexpectedValueException
      */
     public function testDecodeInvalidXml()
     {
@@ -449,7 +449,7 @@ XML;
 
     public function testDecodeEmptyXml()
     {
-        $this->setExpectedException('Symfony\Component\Serializer\Exception\UnexpectedValueException', 'Invalid XML data, it can not be empty.');
+        $this->setExpectedException('Seferov\Component\Serializer\Exception\UnexpectedValueException', 'Invalid XML data, it can not be empty.');
         $this->encoder->decode(' ', 'xml');
     }
 

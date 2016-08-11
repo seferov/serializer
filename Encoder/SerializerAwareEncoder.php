@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Encoder;
+namespace Seferov\Component\Serializer\Encoder;
 
-use Symfony\Component\Serializer\SerializerInterface;
-use Symfony\Component\Serializer\SerializerAwareInterface;
+use Seferov\Component\Serializer\SerializerInterface;
+use Seferov\Component\Serializer\SerializerAwareInterface;
 
 /**
  * SerializerAware Encoder implementation.

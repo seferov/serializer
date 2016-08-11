@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Mapping\Loader;
+namespace Seferov\Component\Serializer\Tests\Mapping\Loader;
 
-use Symfony\Component\Serializer\Mapping\Loader\YamlFileLoader;
-use Symfony\Component\Serializer\Mapping\ClassMetadata;
-use Symfony\Component\Serializer\Tests\Mapping\TestClassMetadataFactory;
+use Seferov\Component\Serializer\Mapping\Loader\YamlFileLoader;
+use Seferov\Component\Serializer\Mapping\ClassMetadata;
+use Seferov\Component\Serializer\Tests\Mapping\TestClassMetadataFactory;
 
 /**
  * @author Kévin Dunglas <dunglas@gmail.com>
@@ -32,12 +32,12 @@ class YamlFileLoaderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->loader = new YamlFileLoader(__DIR__.'/../../Fixtures/serialization.yml');
-        $this->metadata = new ClassMetadata('Symfony\Component\Serializer\Tests\Fixtures\GroupDummy');
+        $this->metadata = new ClassMetadata('Seferov\Component\Serializer\Tests\Fixtures\GroupDummy');
     }
 
     public function testInterface()
     {
-        $this->assertInstanceOf('Symfony\Component\Serializer\Mapping\Loader\LoaderInterface', $this->loader);
+        $this->assertInstanceOf('Seferov\Component\Serializer\Mapping\Loader\LoaderInterface', $this->loader);
     }
 
     public function testLoadClassMetadataReturnsTrueIfSuccessful()
@@ -52,7 +52,7 @@ class YamlFileLoaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Symfony\Component\Serializer\Exception\MappingException
+     * @expectedException \Seferov\Component\Serializer\Exception\MappingException
      */
     public function testLoadClassMetadataReturnsThrowsInvalidMapping()
     {

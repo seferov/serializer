@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Tests\Fixtures;
+namespace Seferov\Component\Serializer\Tests\Fixtures;
 
 class VariadicConstructorArgsDummy
 {

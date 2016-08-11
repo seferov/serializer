@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Serializer\Normalizer;
+namespace Seferov\Component\Serializer\Normalizer;
 
-use Symfony\Component\Serializer\Exception\CircularReferenceException;
-use Symfony\Component\Serializer\Exception\LogicException;
-use Symfony\Component\Serializer\Exception\RuntimeException;
+use Seferov\Component\Serializer\Exception\CircularReferenceException;
+use Seferov\Component\Serializer\Exception\LogicException;
+use Seferov\Component\Serializer\Exception\RuntimeException;
 
 /**
  * Converts between objects with getter and setter methods and arrays.

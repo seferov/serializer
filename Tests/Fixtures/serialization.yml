@@ -1,4 +1,4 @@
-Symfony\Component\Serializer\Tests\Fixtures\GroupDummy:
+Seferov\Component\Serializer\Tests\Fixtures\GroupDummy:
   attributes:
     foo:
       groups: ['group1', 'group2']
