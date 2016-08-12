@@ -29,6 +29,11 @@ class Groups
     private $groups;
 
     /**
+     * @var string
+     */
+    public $name;
+
+    /**
      * @param array $data
      *
      * @throws InvalidArgumentException
@@ -49,6 +54,9 @@ class Groups
             }
         }
 
+        if (isset($data['name'])) {
+            $this->name = $data['name'];
+        }
         $this->groups = $data['value'];
     }
 
