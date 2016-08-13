@@ -13,6 +13,7 @@ namespace Seferov\Component\Serializer\Mapping\Loader;
 
 use Doctrine\Common\Annotations\Reader;
 use Seferov\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\Annotation\Groups as SymfonyGroups;
 use Seferov\Component\Serializer\Exception\MappingException;
 use Seferov\Component\Serializer\Mapping\AttributeMetadata;
 use Seferov\Component\Serializer\Mapping\ClassMetadataInterface;
@@ -56,9 +57,11 @@ class AnnotationLoader implements LoaderInterface
 
             if ($property->getDeclaringClass()->name === $className) {
                 foreach ($this->reader->getPropertyAnnotations($property) as $groups) {
-                    if ($groups instanceof Groups) {
+                    if ($groups instanceof Groups || $groups instanceof SymfonyGroups) {
                         foreach ($groups->getGroups() as $group) {
-                            $attributesMetadata[$property->name]->customName = $groups->name;
+                            if ($groups instanceof Groups) {
+                                $attributesMetadata[$property->name]->customName = $groups->name;
+                            }
                             $attributesMetadata[$property->name]->addGroup($group);
                         }
                     }
@@ -71,7 +74,7 @@ class AnnotationLoader implements LoaderInterface
         foreach ($reflectionClass->getMethods() as $method) {
             if ($method->getDeclaringClass()->name === $className) {
                 foreach ($this->reader->getMethodAnnotations($method) as $groups) {
-                    if ($groups instanceof Groups) {
+                    if ($groups instanceof Groups || $groups instanceof SymfonyGroups) {
                         if (preg_match('/^(get|is|has|set)(.+)$/i', $method->name, $matches)) {
                             $attributeName = lcfirst($matches[2]);
 
@@ -83,7 +86,9 @@ class AnnotationLoader implements LoaderInterface
                             }
 
                             foreach ($groups->getGroups() as $group) {
-                                $attributeMetadata->customName = $groups->name;
+                                if ($groups instanceof Groups) {
+                                    $attributeMetadata->customName = $groups->name;
+                                }
                                 $attributeMetadata->addGroup($group);
                             }
                         } else {
