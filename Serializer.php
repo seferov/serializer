@@ -35,7 +35,7 @@ use Seferov\Component\Serializer\Exception\UnexpectedValueException;
  * @author Lukas Kahwe Smith <smith@pooteeweet.org>
  * @author Kévin Dunglas <dunglas@gmail.com>
  */
-class Serializer implements SerializerInterface, NormalizerInterface, DenormalizerInterface, EncoderInterface, DecoderInterface
+class Serializer implements \Symfony\Component\Serializer\SerializerInterface, NormalizerInterface, DenormalizerInterface, EncoderInterface, DecoderInterface
 {
     /**
      * @var Encoder\ChainEncoder
