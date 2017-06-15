@@ -11,8 +11,8 @@
 
 namespace Seferov\Component\Serializer\Encoder;
 
-use Seferov\Component\Serializer\SerializerInterface;
 use Seferov\Component\Serializer\SerializerAwareInterface;
+use Symfony\Component\Serializer\SerializerInterface;
 
 /**
  * SerializerAware Encoder implementation.
